@@ -166,6 +166,22 @@ This measures the geometry relation between features.
 python3 probing/probe_geometry.py --feature_root /path/to/probing/dit-compare-fm-eps-t300/ --inputs vit-block0-out vit-block1-out vit-block2-out vit-block3-out vit-block4-out vit-block5-out vit-block6-out vit-block7-out vit-block8-out vit-block9-out vit-block10-out vit-block11-out vit-block12-out vit-block13-out vit-block14-out --refs vit-input-with-pos vit-block0-out vit-block1-out vit-block2-out vit-block3-out vit-block4-out vit-block5-out vit-block6-out vit-block7-out vit-block8-out vit-block9-out vit-block10-out vit-block11-out vit-block12-out vit-block13-out --max_images 500 --device cuda --input_layout chw
 ```
 
+## Open questions for future study
+- The findings give us a tool to modify the peak position. This provides the necessary setup to study how LSCs interact with the peak position. The current hypothesis is that the symmetry center of the LSC topology needs to match the peak position.
+- What on earth is the root cause of the asymmetry between $x_0$ and $\epsilon$?
+- The difference between sampling paths is relatively small, but it still exists. This might be an interesting topic.
+- The separability probe result in the Appendix provides some preliminary observation into REPA mechanisms. Why does adding REPA greatly improves separability?
+
 ## Citation
 When mentioning this study, please call it *DiT-Compare*.
-The citation bib is still in prepration. It's weekend and arXiv volunteers don't work overtime.
+```text
+@misc{meng2026interpretingdiffusiontransformerbackbone,
+      title={We Have Been Interpreting Diffusion Transformer Backbone Behaviors Wrong}, 
+      author={Benyuan Meng and Longtao Huang and Yang Liu and Liang Lin},
+      year={2026},
+      eprint={2610.14517},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2610.14517}, 
+}
+```
