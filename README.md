@@ -32,7 +32,7 @@ All is done with the other factors fixed and aligned.
 
 ![](figures/intro.jpg)  
 
-In case you don't have the time to check [the paper](placeholder), here's a brief overview of the mechanism findings, skipping all the evidence to support our argument.
+In case you don't have the time to check [the paper](https://arxiv.org/abs/2610.14517), here's a brief overview of the mechanism findings, skipping all the evidence to support our argument.
 The entire backbone can be divided into three phases:
 1. **Preparation phase**. The input to the backbone is an arbitary linear combination of noise $\epsilon$ and clean image $x_0$: $x_t = \alpha(t)x_0 + \beta(t)\epsilon$. During this phase, the model extracts $x_0$ and $\epsilon$ from the mixed input signal and stores them back into subspaces of the main residual.
 2. **Rising phase**. The backbone constructs a semantic, abstract, and high-level representation of the clean image. It's different from the $x_0$ signal in the input. $x_0$ is the RGB- or VAE-space image, while the representation is mainly about semantics. Just like the difference between a DINOv2 feature and the input image. We denote such a representation as $x_s$. This phase is where our new findings are the closest to the previous knowledge, probably.
